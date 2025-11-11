@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainForm</class>
+ <widget class="QWidget" name="MainForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Aplikasi Jadwal Kajian</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+     </property>
+     <!-- Tab 1: Kajian -->
+     <widget class="QWidget" name="tab_kajian">
+      <attribute name="title">
+       <string>Jadwal Kajian</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_kajian">
+       <item>
+        <layout class="QGridLayout" name="gridForm_kajian">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_tema">
+           <property name="text"><string>Tema</string></property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="edit_tema"/>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label_ustadz">
+           <property name="text"><string>Ustadz</string></property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLineEdit" name="edit_ustadz"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_tempat">
+           <property name="text"><string>Tempat</string></property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="edit_tempat"/>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_tanggal">
+           <property name="text"><string>Tanggal</string></property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QDateEdit" name="edit_tanggal">
+           <property name="calendarPopup"><bool>true</bool></property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_waktu">
+           <property name="text"><string>Waktu</string></property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QTimeEdit" name="edit_waktu"/>
+         </item>
+         <item row="2" column="2" colspan="2">
+          <layout class="QHBoxLayout" name="hButtons_kajian">
+           <item>
+            <widget class="QPushButton" name="btn_tambah_kajian">
+             <property name="text"><string>Tambah</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_edit_kajian">
+             <property name="text"><string>Edit</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_hapus_kajian">
+             <property name="text"><string>Hapus</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_clear_kajian">
+             <property name="text"><string>Clear</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_export_kajian">
+             <property name="text"><string>Export CSV</string></property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="searchRow_kajian">
+         <item>
+          <widget class="QLabel" name="label_search_kajian">
+           <property name="text"><string>Cari (tema/ustadz):</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="edit_search_kajian"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="table_kajian">
+         <property name="columnCount">
+          <number>6</number>
+         </property>
+         <property name="rowCount">
+          <number>0</number>
+         </property>
+         <column>
+          <property name="text"><string>ID</string></property>
+         </column>
+         <column>
+          <property name="text"><string>Tema</string></property>
+         </column>
+         <column>
+          <property name="text"><string>Ustadz</string></property>
+         </column>
+         <column>
+          <property name="text"><string>Tempat</string></property>
+         </column>
+         <column>
+          <property name="text"><string>Tanggal</string></property>
+         </column>
+         <column>
+          <property name="text"><string>Waktu</string></property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <!-- Tab 2: Pengguna (Manajemen User) -->
+     <widget class="QWidget" name="tab_pengguna">
+      <attribute name="title">
+       <string>Manajemen Pengguna</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_pengguna">
+       <item>
+        <layout class="QGridLayout" name="gridForm_pengguna">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_nama_user">
+           <property name="text"><string>Nama</string></property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="edit_nama_user"/>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label_username_user">
+           <property name="text"><string>Username</string></property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLineEdit" name="edit_username_user"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_password_user">
+           <property name="text"><string>Password</string></property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="edit_password_user">
+           <property name="echoMode"><enum>QLineEdit::Password</enum></property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_password_confirm">
+           <property name="text"><string>Konfirmasi Password</string></property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLineEdit" name="edit_password_confirm">
+           <property name="echoMode"><enum>QLineEdit::Password</enum></property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_peran_user">
+           <property name="text"><string>Peran</string></property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="combo_peran_user">
+           <item>
+            <property name="text"><string>admin</string></property>
+           </item>
+           <item>
+            <property name="text"><string>petugas</string></property>
+           </item>
+          </widget>
+         </item>
+         <item row="2" column="2" colspan="2">
+          <layout class="QHBoxLayout" name="hButtons_pengguna">
+           <item>
+            <widget class="QPushButton" name="btn_tambah_user">
+             <property name="text"><string>Tambah</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_edit_user">
+             <property name="text"><string>Edit</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_hapus_user">
+             <property name="text"><string>Hapus</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_clear_user">
+             <property name="text"><string>Clear</string></property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="table_user">
+         <property name="columnCount">
+          <number>4</number>
+         </property>
+         <property name="rowCount">
+          <number>0</number>
+         </property>
+         <column>
+          <property name="text"><string>ID</string></property>
+         </column>
+         <column>
+          <property name="text"><string>Nama</string></property>
+         </column>
+         <column>
+          <property name="text"><string>Username</string></property>
+         </column>
+         <column>
+          <property name="text"><string>Peran</string></property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
